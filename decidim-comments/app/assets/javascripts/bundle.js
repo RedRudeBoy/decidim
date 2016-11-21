@@ -21801,48 +21801,52 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var AddCommentForm = function AddCommentForm() {
-	  return React.createElement(
-	    "div",
-	    { className: "add-comment" },
-	    React.createElement(
-	      "h5",
-	      { className: "section-heading" },
-	      "Deixa el teu comentari"
-	    ),
-	    React.createElement(
+	var AddCommentForm = function () {
+	  function AddCommentForm() {
+	    return React.createElement(
 	      "div",
-	      { className: "opinion-toggle button-group" },
+	      { className: "add-comment" },
 	      React.createElement(
-	        "button",
-	        { className: "button small button--muted opinion-toggle--ok" },
-	        "Estic a favor"
+	        "h5",
+	        { className: "section-heading" },
+	        "Deixa el teu comentari"
 	      ),
 	      React.createElement(
-	        "button",
-	        { className: "button small button--muted opinion-toggle--ko" },
-	        "Estic en contra"
+	        "div",
+	        { className: "opinion-toggle button-group" },
+	        React.createElement(
+	          "button",
+	          { className: "button small button--muted opinion-toggle--ok" },
+	          "Estic a favor"
+	        ),
+	        React.createElement(
+	          "button",
+	          { className: "button small button--muted opinion-toggle--ko" },
+	          "Estic en contra"
+	        )
+	      ),
+	      React.createElement(
+	        "form",
+	        null,
+	        React.createElement(
+	          "label",
+	          { className: "show-for-sr", htmlFor: "add-comment" },
+	          "Comentari"
+	        ),
+	        React.createElement("textarea", {
+	          id: "add-comment",
+	          rows: "4",
+	          placeholder: "Qu\xE8 opines d'aquesta proposta?"
+	        }),
+	        React.createElement("input", { type: "submit", className: "button button--sc", value: "Enviar" })
 	      )
-	    ),
-	    React.createElement(
-	      "form",
-	      null,
-	      React.createElement(
-	        "label",
-	        { className: "show-for-sr", htmlFor: "add-comment" },
-	        "Comentari"
-	      ),
-	      React.createElement("textarea", {
-	        id: "add-comment",
-	        rows: "4",
-	        placeholder: "Qu\xE8 opines d'aquesta proposta?"
-	      }),
-	      React.createElement("input", { type: "submit", className: "button button--sc", value: "Enviar" })
-	    )
-	  );
-	};
+	    );
+	  }
 
-	exports.default = AddCommentForm;
+	  return AddCommentForm;
+	}();
+
+	exports["default"] = AddCommentForm;
 
 /***/ }
 /******/ ]);
