@@ -58,12 +58,12 @@
 
 	var _comments2 = _interopRequireDefault(_comments);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 	// Expose globals for react-rails
-	window.React = _react2.default;
-	window.ReactDOM = _reactDom2.default;
-	window.Comments = _comments2.default;
+	window.React = _react2['default'];
+	window.ReactDOM = _reactDom2['default'];
+	window.Comments = _comments2['default'];
 
 /***/ },
 /* 1 */
@@ -21478,61 +21478,65 @@
 
 	var _add_comment_form2 = _interopRequireDefault(_add_comment_form);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var Comments = function Comments() {
-	  return React.createElement(
-	    'div',
-	    { className: 'columns large-9', id: 'comments' },
-	    React.createElement(_featured_comment2.default, null),
-	    React.createElement(
-	      'section',
-	      { className: 'comments' },
+	var Comments = function () {
+	  function Comments() {
+	    return React.createElement(
+	      'div',
+	      { className: 'columns large-9', id: 'comments' },
+	      React.createElement(_featured_comment2['default'], null),
 	      React.createElement(
-	        'div',
-	        { className: 'row collapse order-by' },
+	        'section',
+	        { className: 'comments' },
 	        React.createElement(
-	          'h2',
-	          { className: 'order-by__text section-heading' },
-	          '132 comentaris -',
+	          'div',
+	          { className: 'row collapse order-by' },
 	          React.createElement(
-	            'span',
-	            { className: 'order-by__tabs' },
+	            'h2',
+	            { className: 'order-by__text section-heading' },
+	            '132 comentaris -',
 	            React.createElement(
-	              'a',
-	              { className: 'order-by__tab' },
-	              'a favor'
-	            ),
+	              'span',
+	              { className: 'order-by__tabs' },
+	              React.createElement(
+	                'a',
+	                { className: 'order-by__tab' },
+	                'a favor'
+	              ),
+	              React.createElement(
+	                'a',
+	                { className: 'order-by__tab' },
+	                'en contra'
+	              )
+	            )
+	          ),
+	          React.createElement(_comment_order_selector2['default'], null)
+	        ),
+	        React.createElement(_comment_thread2['default'], null),
+	        React.createElement(
+	          'div',
+	          { className: 'show-more show-more--comment-thread' },
+	          React.createElement(
+	            'button',
+	            { className: 'muted-link' },
+	            'Ver 16 comentarios m\xE1s',
 	            React.createElement(
-	              'a',
-	              { className: 'order-by__tab' },
-	              'en contra'
+	              'span',
+	              { 'aria-hidden': 'true' },
+	              '+'
 	            )
 	          )
 	        ),
-	        React.createElement(_comment_order_selector2.default, null)
-	      ),
-	      React.createElement(_comment_thread2.default, null),
-	      React.createElement(
-	        'div',
-	        { className: 'show-more show-more--comment-thread' },
-	        React.createElement(
-	          'button',
-	          { className: 'muted-link' },
-	          'Ver 16 comentarios m\xE1s',
-	          React.createElement(
-	            'span',
-	            { 'aria-hidden': 'true' },
-	            '+'
-	          )
-	        )
-	      ),
-	      React.createElement(_add_comment_form2.default, null)
-	    )
-	  );
-	};
+	        React.createElement(_add_comment_form2['default'], null)
+	      )
+	    );
+	  }
 
-	exports.default = Comments;
+	  return Comments;
+	}();
+
+	exports['default'] = Comments;
 
 /***/ },
 /* 179 */
@@ -21548,26 +21552,30 @@
 
 	var _comment2 = _interopRequireDefault(_comment);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	var FeaturedComment = function FeaturedComment() {
-	  return React.createElement(
-	    "section",
-	    { className: "comments" },
-	    React.createElement(
-	      "h4",
-	      { className: "section-heading" },
-	      "Comentario destacado"
-	    ),
-	    React.createElement(
-	      "div",
-	      { className: "comment-thread comment--pinned" },
-	      React.createElement(_comment2.default, null)
-	    )
-	  );
-	};
+	var FeaturedComment = function () {
+	  function FeaturedComment() {
+	    return React.createElement(
+	      "section",
+	      { className: "comments" },
+	      React.createElement(
+	        "h4",
+	        { className: "section-heading" },
+	        "Comentario destacado"
+	      ),
+	      React.createElement(
+	        "div",
+	        { className: "comment-thread comment--pinned" },
+	        React.createElement(_comment2["default"], null)
+	      )
+	    );
+	  }
 
-	exports.default = FeaturedComment;
+	  return FeaturedComment;
+	}();
+
+	exports["default"] = FeaturedComment;
 
 /***/ },
 /* 180 */
@@ -21581,109 +21589,117 @@
 	// comment--nested
 	// comment--nested--alt
 	// comment--highlight
-	var Comment = function Comment() {
-	  return React.createElement(
-	    "article",
-	    { className: "comment" },
-	    React.createElement(
-	      "div",
-	      { className: "comment__header" },
+	var Comment = function () {
+	  function Comment() {
+	    return React.createElement(
+	      "article",
+	      { className: "comment" },
 	      React.createElement(
 	        "div",
-	        { className: "author-data" },
+	        { className: "comment__header" },
 	        React.createElement(
 	          "div",
-	          { className: "author-data__main" },
+	          { className: "author-data" },
 	          React.createElement(
 	            "div",
-	            { className: "author author--inline" },
+	            { className: "author-data__main" },
+	            React.createElement(
+	              "div",
+	              { className: "author author--inline" },
+	              React.createElement(
+	                "a",
+	                { className: "author__avatar" },
+	                React.createElement(
+	                  "span",
+	                  null,
+	                  "Avatar image"
+	                )
+	              ),
+	              React.createElement(
+	                "a",
+	                { className: "author__name" },
+	                "Marc Serres"
+	              ),
+	              React.createElement(
+	                "time",
+	                { dateTime: "2016-08-01T19:47Z" },
+	                "1-08-2016 21:47"
+	              )
+	            )
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "author-data__extra" },
 	            React.createElement(
 	              "a",
-	              { className: "author__avatar" },
-	              React.createElement("img", { src: "/images/demo-avatar.jpg", alt: "" })
-	            ),
-	            React.createElement(
-	              "a",
-	              { className: "author__name" },
-	              "Marc Serres"
-	            ),
-	            React.createElement(
-	              "time",
-	              { dateTime: "2016-08-01T19:47Z" },
-	              "1-08-2016 21:47"
+	              null,
+	              "Flag"
 	            )
 	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "author-data__extra" },
-	          React.createElement(
-	            "a",
-	            null,
-	            "Flag"
-	          )
 	        )
-	      )
-	    ),
-	    React.createElement(
-	      "div",
-	      { className: "comment__content" },
-	      React.createElement(
-	        "p",
-	        null,
-	        React.createElement(
-	          "span",
-	          { className: "success label" },
-	          "A favor"
-	        ),
-	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-	      )
-	    ),
-	    React.createElement(
-	      "div",
-	      { className: "comment__footer" },
-	      React.createElement("button", { className: "comment__reply muted-link", "data-toggle": "comment1-reply" }),
+	      ),
 	      React.createElement(
 	        "div",
-	        { className: "comment__votes" },
+	        { className: "comment__content" },
 	        React.createElement(
-	          "a",
-	          { className: "comment__votes--up" },
-	          "257"
-	        ),
+	          "p",
+	          null,
+	          React.createElement(
+	            "span",
+	            { className: "success label" },
+	            "A favor"
+	          ),
+	          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	        )
+	      ),
+	      React.createElement(
+	        "div",
+	        { className: "comment__footer" },
+	        React.createElement("button", { className: "comment__reply muted-link", "data-toggle": "comment1-reply" }),
 	        React.createElement(
-	          "a",
-	          { className: "comment__votes--down" },
-	          "257"
+	          "div",
+	          { className: "comment__votes" },
+	          React.createElement(
+	            "a",
+	            { className: "comment__votes--up" },
+	            "257"
+	          ),
+	          React.createElement(
+	            "a",
+	            { className: "comment__votes--down" },
+	            "257"
+	          )
+	        )
+	      ),
+	      React.createElement(
+	        "div",
+	        {
+	          className: "add-comment add-comment--reply",
+	          id: "comment1-reply",
+	          "data-toggler": ".is-active"
+	        },
+	        React.createElement(
+	          "form",
+	          null,
+	          React.createElement(
+	            "label",
+	            { className: "show-for-sr", htmlFor: "add-comment-1" },
+	            "Resposta"
+	          ),
+	          React.createElement("textarea", {
+	            id: "add-comment-1",
+	            placeholder: "Respon a aquest comentari"
+	          }),
+	          React.createElement("input", { type: "submit", className: "button small hollow", value: "Enviar" })
 	        )
 	      )
-	    ),
-	    React.createElement(
-	      "div",
-	      {
-	        className: "add-comment add-comment--reply",
-	        id: "comment1-reply",
-	        "data-toggler": ".is-active"
-	      },
-	      React.createElement(
-	        "form",
-	        null,
-	        React.createElement(
-	          "label",
-	          { className: "show-for-sr", htmlFor: "add-comment-1" },
-	          "Resposta"
-	        ),
-	        React.createElement("textarea", {
-	          id: "add-comment-1",
-	          placeholder: "Respon a aquest comentari"
-	        }),
-	        React.createElement("input", { type: "submit", className: "button small hollow", value: "Enviar" })
-	      )
-	    )
-	  );
-	};
+	    );
+	  }
 
-	exports.default = Comment;
+	  return Comment;
+	}();
+
+	exports["default"] = Comment;
 
 /***/ },
 /* 181 */
@@ -21694,63 +21710,67 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var CommentOrderSelector = function CommentOrderSelector() {
-	  return React.createElement(
-	    "div",
-	    { className: "order-by__dropdown order-by__dropdown--right" },
-	    React.createElement(
-	      "span",
-	      { className: "order-by__text" },
-	      "Ordenar per:"
-	    ),
-	    React.createElement(
-	      "ul",
-	      { className: "dropdown menu", "data-dropdown-menu": true },
+	var CommentOrderSelector = function () {
+	  function CommentOrderSelector() {
+	    return React.createElement(
+	      "div",
+	      { className: "order-by__dropdown order-by__dropdown--right" },
 	      React.createElement(
-	        "li",
-	        null,
+	        "span",
+	        { className: "order-by__text" },
+	        "Ordenar per:"
+	      ),
+	      React.createElement(
+	        "ul",
+	        { className: "dropdown menu", "data-dropdown-menu": true },
 	        React.createElement(
-	          "a",
+	          "li",
 	          null,
-	          "M\xE9s votats"
-	        ),
-	        React.createElement(
-	          "ul",
-	          { className: "menu" },
 	          React.createElement(
-	            "li",
+	            "a",
 	            null,
-	            React.createElement(
-	              "a",
-	              null,
-	              "M\xE9s votats"
-	            )
+	            "M\xE9s votats"
 	          ),
 	          React.createElement(
-	            "li",
-	            null,
+	            "ul",
+	            { className: "menu" },
 	            React.createElement(
-	              "a",
+	              "li",
 	              null,
-	              "M\xE9s nous"
-	            )
-	          ),
-	          React.createElement(
-	            "li",
-	            null,
+	              React.createElement(
+	                "a",
+	                null,
+	                "M\xE9s votats"
+	              )
+	            ),
 	            React.createElement(
-	              "a",
+	              "li",
 	              null,
-	              "M\xE9s antics"
+	              React.createElement(
+	                "a",
+	                null,
+	                "M\xE9s nous"
+	              )
+	            ),
+	            React.createElement(
+	              "li",
+	              null,
+	              React.createElement(
+	                "a",
+	                null,
+	                "M\xE9s antics"
+	              )
 	            )
 	          )
 	        )
 	      )
-	    )
-	  );
-	};
+	    );
+	  }
 
-	exports.default = CommentOrderSelector;
+	  return CommentOrderSelector;
+	}();
+
+	exports["default"] = CommentOrderSelector;
 
 /***/ },
 /* 182 */
@@ -21766,31 +21786,35 @@
 
 	var _comment2 = _interopRequireDefault(_comment);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	var CommentThread = function CommentThread() {
-	  return React.createElement(
-	    "div",
-	    null,
-	    React.createElement(
-	      "h6",
-	      { className: "comment-thread__title" },
-	      "Conversaci\xF3n con ",
-	      React.createElement(
-	        "a",
-	        { href: "" },
-	        "Maria Garcia"
-	      )
-	    ),
-	    React.createElement(
+	var CommentThread = function () {
+	  function CommentThread() {
+	    return React.createElement(
 	      "div",
-	      { className: "comment-thread" },
-	      React.createElement(_comment2.default, null)
-	    )
-	  );
-	};
+	      null,
+	      React.createElement(
+	        "h6",
+	        { className: "comment-thread__title" },
+	        "Conversaci\xF3n con ",
+	        React.createElement(
+	          "a",
+	          { href: "" },
+	          "Maria Garcia"
+	        )
+	      ),
+	      React.createElement(
+	        "div",
+	        { className: "comment-thread" },
+	        React.createElement(_comment2["default"], null)
+	      )
+	    );
+	  }
 
-	exports.default = CommentThread;
+	  return CommentThread;
+	}();
+
+	exports["default"] = CommentThread;
 
 /***/ },
 /* 183 */
