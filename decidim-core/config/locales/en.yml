@@ -87,6 +87,7 @@ en:
   errors:
     messages:
       file_size_is_less_than_or_equal_to: file size must be less than or equal to %{count}
+      nesting_too_deep: can't be inside of a subcategory
   layouts:
     decidim:
       footer:
